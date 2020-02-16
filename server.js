@@ -9,7 +9,7 @@ server.use(express.json());
 server.get('/api/accounts', (req, res) => {
     db.select('*').from('accounts')
         .then(accounts => {
-            console.log(accounts)
+            // console.log(accounts)
             res.status(200).json(accounts)
         })
         .catch(err => {
